@@ -41,9 +41,8 @@
                   <h5 class="card-title text-center">Produk Axis</h5>
                   <p class="card-text">Tentang Produk Axis</p>
                 </div>
-                <div class="card-footer  justify-content-between align-items-center border-0">
-                    <a class="btn btn-primary d-block mx-md-5">detail</a>
-                    
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn btn-center btn-primary d-block">detail</a>
                 </div>
               </div>
         </div>
@@ -53,11 +52,10 @@
                 <img src="INDOSAT.jpg" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title text-center">Produk indosat</h5>
-                  <p class="card-text">Produk Indosat</p>
+                  <p class="card-text">Tentang Produk Indosat</p>
                 </div>
-                <div class="card-footer  justify-content-between align-items-center border-0">
-                    <a class="btn btn-sm btn-primary d-block mx-md-5">detail</a>
-                    
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn btn-primary d-block">detail</a>
                 </div>
               </div>
         </div>
@@ -67,11 +65,10 @@
                 <img src="SMATFREN.jpg" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title text-center">Produk Smartfren</h5>
-                  <p class="card-text">Produk Smartfren</p>
+                  <p class="card-text">Tentang Produk Smartfren</p>
                 </div>
-                <div class="card-footers justify-content-between align-items-center border-0">
-                    <a class="btn btn-sm btn-primary d-block mx-md-5">detail</a>
-                    
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn btn-primary d-block">detail</a>
                 </div>
               </div>
         </div>
@@ -81,11 +78,10 @@
                 <img src="TELKOMSEL.jpg" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title text-center">Produk telkomsel</h5>
-                  <p class="card-text">Produk Telkomsel</p>
+                  <p class="card-text">Tentang Produk Telkomsel</p>
                 </div>
-                <div class="card-footer  justify-content-between align-items-center border-0">
-                    <a class="btn btn-sm btn-primary d-block mx-md-5">detail</a>
-                    
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn btn-primary d-block ">detail</a>
                 </div>
               </div>
         </div>
@@ -95,11 +91,10 @@
                 <img src="TRHEE.jpg" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title text-center">Produk Three</h5>
-                  <p class="card-text">Produk Three</p>
+                  <p class="card-text">Tentang Produk Three</p>
                 </div>
-                <div class="card-footer  justify-content-between align-items-center border-0">
-                    <a class="btn btn-sm btn-primary d-block mx-md-5">detail</a>
-                    
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn  btn-primary d-block">detail</a>
                 </div>
               </div>
         </div>
@@ -109,15 +104,57 @@
                 <img src="XL.jpg" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title text-center">Produk XL</h5>
-                  <p class="card-text">Produk XL</p>
+                  <p class="card-text">Tentang Produk XL</p>
                 </div>
-                <div class="card-footer s align-items-center border-0">
-                    <a class="btn btn-sm btn-primary d-block mx-md-5">detail</a>
+                <div class="card-footer justify-content-center align-items-center border-0">
+                    <a class="btn btn-primary d-block">detail</a>
                 </div>
               </div>
         </div>
         </div>
-    </div> 
+    </div> <!---Riwayat Transaksi-->
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Transaction History</h1>
+        <form>
+            <div class="form-group">
+                <label for="transaction">Input Transaction:</label>
+                <input type="text" class="form-control" id="transaction" placeholder="Enter transaction">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Transaction</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list">
+                <!-- Transactions will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function(e) {
+                e.preventDefault();
+                var transaction = $('#transaction').val();
+                $('#transaction-list').append('<tr><td>' + transaction + '</td></tr>');
+                $('#transaction').val('');
+            });
+        });
+    </script>
+</body>
+</html>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
